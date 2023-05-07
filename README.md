@@ -18,19 +18,27 @@ cd polaris
 
 Crie uma cópia do arquivo `.env.example` chamada `.env` e configure as variáveis
 
-4. Instale todos os pacotes do projeto
+4. Execute o script de setup do projeto
 
 ```bash
-npm install
+npm run setup
 ```
 
-5. Rode o projeto no ambiente de desenvolvimento
+5. Rode o servidor.
 
 ```bash
-npm run start:dev
+npm run dev:server
 ```
 
-6. Acesse `http://localhost:3000` no seu navegador.
+Estará disponível em `http://localhost:3000`
+
+6. Rode o web app
+
+```bash
+npm run dev:frontend
+```
+
+Acesse `http://localhost:4200` no seu navegador
 
 ## Contribuidores
 
