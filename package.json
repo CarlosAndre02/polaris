@@ -5,10 +5,15 @@
   "author": "Carlos André e Gabryel Alcantara",
   "main": "index.js",
   "license": "MIT",
+  "workspaces": [
+    "frontend"
+  ],
   "scripts": {
+    "setup": "npm install && npm install --workspace=frontend",
     "build": "rimraf ./dist && tsc",
-    "start": "npm run build && node dist/index.js",
-    "start:dev": "npx nodemon"
+    "start:server": "npm run build && node dist/index.js",
+    "dev:server": "npx nodemon",
+    "dev:frontend": "npm run start --workspace=frontend"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
