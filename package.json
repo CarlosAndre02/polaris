@@ -13,7 +13,8 @@
     "build": "rimraf ./dist && tsc",
     "start:server": "npm run build && node dist/index.js",
     "dev:server": "npx nodemon",
-    "dev:frontend": "npm run start --workspace=frontend"
+    "dev:frontend": "npm run start --workspace=frontend",
+    "ng": "npm run ng --workspace=frontend"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
