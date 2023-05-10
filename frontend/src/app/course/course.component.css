@@ -1,0 +1,13 @@
+.customBorder {
+    border: 1px solid black;
+}
+
+/* .card-add-button {
+    width: 1px;
+    justify-self: left;
+} */
+
+.card-add-buttom {
+    height: 50px;
+    width: 50px;
+}
