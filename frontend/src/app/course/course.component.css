@@ -1,0 +1,26 @@
+.customBorder {
+    border: 1px solid black;
+}
+
+.card-border {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.languages {
+    height: 100%;
+}
+
+/* .card-add-button {
+    width: 1px;
+    justify-self: left;
+} */
+
+.card-add-buttom {
+    height: 40px;
+    width: 40px;
+}
+
+.selected-languages {
+    height: 500px;
+}
