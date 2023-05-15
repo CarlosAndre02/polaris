@@ -1,4 +1,14 @@
 .nav-list {
   border-bottom: 1px solid black;
   padding-left: 30px;
+  color: black;
+}
+
+.nav-link:hover {
+  border: none;
+}
+
+.nav-link:focus {
+  border: none;
+  text-decoration: underline;
 }
