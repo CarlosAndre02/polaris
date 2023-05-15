@@ -1,0 +1,48 @@
+.app-container {
+  height: 100%;
+}
+
+.customBorder {
+  border: 1px solid black;
+}
+
+.D_buscar {
+  border-bottom: 1px solid #000;
+}
+
+.I_buscar {
+  border-radius: 5px;
+}
+
+.B_buscar {
+  padding: 6px 25px;
+  /* border-radius: 20px; */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #d8ffd1;
+}
+
+.D_exibir {
+  height: 530px;
+  overflow-y: auto;
+
+  /* padding: 20px 0; */
+  /* flex-direction: column; */
+  /* border: solid 1px #000; */
+}
+
+.languages-card {
+  max-width: 750px;
+  background-color: #cbdcdf;
+  /* height: fit-content; */
+}
+
+.D_buscar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-border {
+  border: 2px solid black;
+  border-radius: 10px;
+}
