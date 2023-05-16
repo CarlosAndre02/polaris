@@ -1,0 +1,23 @@
+[
+  {
+    "name": "HTML",
+    "duration": 20,
+    "teacher": "Vinicius",
+    "description": "Descubra o poder de criar páginas web incríveis com o HTML! Aprenda a linguagem fundamental para dar vida às suas ideias e projetos online.",
+    "content": "Descubra o poder de criar páginas web incríveis com o HTML! Aprenda a linguagem fundamental para dar vida às suas ideias e projetos online. Com nosso curso de HTML, você dominará as habilidades necessárias para estruturar seu conteúdo, adicionar elementos interativos e criar designs visualmente atraentes."
+  },
+  {
+    "name": "CSS",
+    "duration": 10,
+    "teacher": "Rosalen",
+    "description": "Explore o mundo do design e transforme suas páginas web em verdadeiras obras de arte com o nosso curso de CSS!",
+    "content": "Explore o mundo do design e transforme suas páginas web em verdadeiras obras de arte com o nosso curso de CSS! Descubra como criar estilos elegantes, layouts responsivos e efeitos visuais impressionantes."
+  },
+  {
+    "name": "Javascript",
+    "duration": 30,
+    "teacher": "da Silva",
+    "description": "Descubra o poder do JavaScript e leve suas habilidades de desenvolvimento web para o próximo nível com o nosso curso especializado!",
+    "content": "Descubra o poder do JavaScript e leve suas habilidades de desenvolvimento web para o próximo nível com o nosso curso especializado! Aprenda a criar interatividade e funcionalidades dinâmicas em suas páginas web, desde animações suaves até formulários inteligentes."
+  }
+]
