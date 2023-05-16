@@ -1,93 +1,56 @@
 <div class="main-content d-flex pb-0">
-    <div class="languages col-md-8 px-4 pt-4 pb-5">
-        <div class="languages-card p-3 mb-4 d-flex card-border">
-            <div class="card-image align-self-center p-0 col-md-3">
-                <img class="w-100" src="../../assets/html-image.png" alt="html image">
-            </div>
-            <div class="card-info col-md-9 d-flex">
-                <div class="card-bottom-info col-md-10">
-                    <h4 class="card-title text-center">HTML</h4>
-                    <p class="card-content p-0 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis quasi animi nesciunt voluptate ipsa quod fuga similique! Delectus reprehenderit autem placeat ut id, nemo magnam, ipsum excepturi laudantium tempora iusto.</p>
-                    <div class="d-flex">
-                        <p class="card-name col-md-8 p-0 m-0">Prof.: Vinicius</p>
-                        <p class="card-duration col-md-4 p-0 m-0 text-right">20 Horas</p>
-                    </div>
-                </div>
-                <div class="card-button-box col-md-2 p-0 d-flex align-self-end justify-content-end">
-                    <button class="card-add-buttom">+</button>
-                </div>
-            </div>
+  <div class="languages col-md-8 px-4 pt-4 pb-5">
+    <app-language-card
+      [language]="lang"
+      [addToSelectedLanguages]="addSelectedLanguage"
+      *ngFor="let lang of languages"
+    ></app-language-card>
+  </div>
+  <div class="selected-languages p-0 col-md-4">
+    <form
+      (ngSubmit)="onSubmit(refLocalForm)"
+      #refLocalForm="ngForm"
+      ngNativeValidate
+      id="myform"
+    >
+      <div class="selected-languages-inputs py-4 px-5">
+        <div class="input-group mb-3">
+          <label for="name">Nome:</label>
+          <input
+            class="w-100 form-control"
+            ngModel
+            type="text"
+            id="name"
+            name="name"
+          />
         </div>
-        <div class="languages-card p-3 mb-4 d-flex card-border">
-            <div class="card-image align-self-center p-0 col-md-3">
-                <img class="w-100" src="../../assets/css-image.png" alt="CSS image">
-            </div>
-            <div class="card-info col-md-9 d-flex">
-                <div class="card-bottom-info col-md-10">
-                    <h4 class="card-title text-center">CSS</h4>
-                    <p class="card-content p-0 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis quasi animi nesciunt voluptate ipsa quod fuga similique! Delectus reprehenderit autem placeat ut id, nemo magnam, ipsum excepturi laudantium tempora iusto.</p>
-                    <div class="d-flex">
-                        <p class="card-name col-md-8 p-0 m-0">Prof.: Rosalen</p>
-                        <p class="card-duration col-md-4 p-0 m-0 text-right">10 Horas</p>
-                    </div>
-                </div>
-                <div class="card-button-box col-md-2 p-0 d-flex align-self-end justify-content-end">
-                    <button class="card-add-buttom">+</button>
-                </div>
-            </div>
+        <div class="input-group">
+          <label for="email">Email:</label>
+          <input
+            class="w-100 form-control"
+            ngModel
+            type="text"
+            id="email"
+            name="email"
+          />
         </div>
-        <div class="languages-card p-3 d-flex card-border">
-            <div class="card-image align-self-center p-0 col-md-3">
-                <img class="w-100" src="../../assets/js-image.png" alt="Javascript image">
-            </div>
-            <div class="card-info col-md-9 d-flex">
-                <div class="card-bottom-info col-md-10">
-                    <h4 class="card-title text-center">JavaScript</h4>
-                    <p class="card-content p-0 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis quasi animi nesciunt voluptate ipsa quod fuga similique! Delectus reprehenderit autem placeat ut id, nemo magnam, ipsum excepturi laudantium tempora iusto.</p>
-                    <div class="d-flex">
-                        <p class="card-name col-md-8 p-0 m-0">Prof.: da Silva</p>
-                        <p class="card-duration col-md-4 p-0 m-0 text-right">30 Horas</p>
-                    </div>
-                </div>
-                <div class="card-button-box col-md-2 p-0 d-flex align-self-end justify-content-end">
-                    <button class="card-add-buttom">+</button>
-                </div>
-            </div>
+      </div>
+    </form>
+    <div class="selected-languages-items py-4 px-5">
+      <h3 class="selected-languages-title mb-5">Linguagens selecionadas</h3>
+      <div class="selected-languages-group">
+        <div
+          class="selected-languages-card"
+          *ngFor="let langs of selectedLanguages"
+        >
+          <p>
+            {{ langs.name }} - {{ langs.teacher }} - {{ langs.duration }} Horas
+          </p>
         </div>
+      </div>
+      <div class="selected-languages-button">
+        <button type="submit" form="myform">Salvar</button>
+      </div>
     </div>
-    <div class="selected-languages p-0 col-md-4">
-        <div class="selected-languages-inputs py-4 px-5">
-            <div class="input-group mb-3">
-                <label for="name">Nome:</label>
-                <input class="w-100" type="text" id="name">
-            </div>
-            <div class="input-group">
-                <label for="email">Email:</label>
-                <input class="w-100" type="text" id="email">
-            </div>
-        </div>
-        <div class="selected-languages-items py-4 px-5">
-            <h3 class="selected-languages-title mb-5">Linguagens selecionadas</h3>
-            <div class="selected-languages-group ">
-                <div class="selected-languages-card">
-                    <p class="">HTML - Vinicius - 20 Horas</p>
-                </div>
-                <div class="selected-languages-card">
-                    <p>CSS - Rosalem - 10 Horas</p>
-                </div>
-                <div class="selected-languages-card">
-                    <p>JavaScript - da Silva - 30 Horas</p>
-                </div>
-                <div class="selected-languages-card">
-                    <p>JavaScript - da Silva - 30 Horas</p>
-                </div>
-                <div class="selected-languages-card">
-                    <p>JavaScript - da Silva - 30 Horas</p>
-                </div>
-            </div>
-            <div class="selected-languages-button">
-                <button>Salvar</button>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>

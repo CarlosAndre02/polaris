@@ -2,11 +2,6 @@
   border: 1px solid black;
 }
 
-.card-border {
-  border: 2px solid black;
-  border-radius: 10px;
-}
-
 .main-content {
   height: 100%;
   width: 100%;
@@ -24,16 +19,6 @@
 
 .languages::-webkit-scrollbar {
   display: none;
-}
-
-.languages-card {
-  background-color: #cbdcdf;
-}
-
-.card-add-buttom {
-  height: 40px;
-  width: 40px;
-  background-color: #aeced2;
 }
 
 .selected-languages {
