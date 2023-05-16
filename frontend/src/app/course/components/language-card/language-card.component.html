@@ -1,0 +1,24 @@
+<div class="languages-card p-3 mb-4 d-flex card-border">
+  <div class="card-image align-self-center p-0 col-md-3">
+    <img class="w-100" src="{{ language.imageUrl }}" alt="html image" />
+  </div>
+  <div class="card-info col-md-9 d-flex">
+    <div class="card-bottom-info col-md-10">
+      <h4 class="card-title text-center">{{ language.name }}</h4>
+      <p class="card-content p-0 text-justify">
+        {{ language.description }}
+      </p>
+      <div class="d-flex">
+        <p class="card-name col-md-8 p-0 m-0">Prof.: {{ language.teacher }}</p>
+        <p class="card-duration col-md-4 p-0 m-0 text-right">
+          {{ language.duration }} Horas
+        </p>
+      </div>
+    </div>
+    <div
+      class="card-button-box col-md-2 p-0 d-flex align-self-end justify-content-end"
+    >
+      <button class="card-add-buttom" (click)="onAddLanguage()">+</button>
+    </div>
+  </div>
+</div>

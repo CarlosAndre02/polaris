@@ -1,0 +1,14 @@
+.languages-card {
+  background-color: #cbdcdf;
+}
+
+.card-add-buttom {
+  height: 40px;
+  width: 40px;
+  background-color: #aeced2;
+}
+
+.card-border {
+  border: 2px solid black;
+  border-radius: 10px;
+}
