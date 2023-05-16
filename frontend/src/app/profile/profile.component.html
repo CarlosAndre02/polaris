@@ -1,86 +1,37 @@
 <div class="app-container p-0">
-  <div class="D_buscar py-4">
-    <div class="input-group w-50">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">Email:</span>
+  <form
+    (ngSubmit)="onSubmit(refLocalForm)"
+    #refLocalForm="ngForm"
+    ngNativeValidate
+  >
+    <div class="D_buscar py-4">
+      <div class="input-group w-50">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Email:</span>
+        </div>
+        <input type="email" class="form-control" ngModel name="email" />
       </div>
-      <input type="email" class="form-control" />
+      <button type="submit" class="B_buscar ml-2">BUSCAR</button>
     </div>
-    <button class="B_buscar ml-2">BUSCAR</button>
-  </div>
+  </form>
 
   <div class="D_exibir d-flex flex-column align-items-center">
-    <div class="languages-card p-3 m-4 d-flex card-border">
+    <div
+      class="languages-card p-3 m-4 d-flex card-border"
+      *ngFor="let lpuser of user.languages"
+    >
       <div class="card-info d-flex">
         <div class="card-bottom-info">
-          <h4 class="card-title text-center">HTML</h4>
+          <h4 class="card-title text-center">{{ lpuser.name }}</h4>
           <p class="card-content p-0 text-justify">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
-            quasi animi nesciunt voluptate ipsa quod fuga similique! Delectus
-            reprehenderit autem placeat ut id, nemo magnam, ipsum excepturi
-            laudantium tempora iusto.
+            {{ lpuser.content }}
           </p>
           <div class="d-flex">
-            <p class="card-name col-md-8 p-0 m-0">Professor: Rosalen</p>
-            <p class="card-duration col-md-4 p-0 m-0 text-right">
-              Carga horária: 10 Horas
+            <p class="card-name col-md-8 p-0 m-0">
+              Professor: {{ lpuser.teacher }}
             </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="languages-card p-3 m-4 d-flex card-border">
-      <div class="card-info d-flex">
-        <div class="card-bottom-info">
-          <h4 class="card-title text-center">HTML</h4>
-          <p class="card-content p-0 text-justify">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
-            quasi animi nesciunt voluptate ipsa quod fuga similique! Delectus
-            reprehenderit autem placeat ut id, nemo magnam, ipsum excepturi
-            laudantium tempora iusto.
-          </p>
-          <div class="d-flex">
-            <p class="card-name col-md-8 p-0 m-0">Professor: Rosalen</p>
             <p class="card-duration col-md-4 p-0 m-0 text-right">
-              Carga horária: 10 Horas
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="languages-card p-3 m-4 d-flex card-border">
-      <div class="card-info d-flex">
-        <div class="card-bottom-info">
-          <h4 class="card-title text-center">HTML</h4>
-          <p class="card-content p-0 text-justify">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
-            quasi animi nesciunt voluptate ipsa quod fuga similique! Delectus
-            reprehenderit autem placeat ut id, nemo magnam, ipsum excepturi
-            laudantium tempora iusto.
-          </p>
-          <div class="d-flex">
-            <p class="card-name col-md-8 p-0 m-0">Professor: Rosalen</p>
-            <p class="card-duration col-md-4 p-0 m-0 text-right">
-              Carga horária: 10 Horas
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="languages-card p-3 m-4 d-flex card-border">
-      <div class="card-info d-flex">
-        <div class="card-bottom-info">
-          <h4 class="card-title text-center">HTML</h4>
-          <p class="card-content p-0 text-justify">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
-            quasi animi nesciunt voluptate ipsa quod fuga similique! Delectus
-            reprehenderit autem placeat ut id, nemo magnam, ipsum excepturi
-            laudantium tempora iusto.
-          </p>
-          <div class="d-flex">
-            <p class="card-name col-md-8 p-0 m-0">Professor: Rosalen</p>
-            <p class="card-duration col-md-4 p-0 m-0 text-right">
-              Carga horária: 10 Horas
+              Carga horária: {{ lpuser.duration }} Horas
             </p>
           </div>
         </div>
